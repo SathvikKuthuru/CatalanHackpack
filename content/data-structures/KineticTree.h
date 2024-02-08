@@ -1,13 +1,6 @@
 // kinetic_tournament.cpp
 // Eric K. Zhang; Aug. 29, 2020
 //
-// This is an implementation of a _kinetic tournament_, which I originally
-// learned about from Daniel Zhang in this Codeforces blog comment:
-// https://codeforces.com/blog/entry/68534#comment-530381
-//
-// The functionality of the data structure is a mix between a line container,
-// i.e., "convex hull trick", and a segment tree.
-//
 // Suppose that you have an array containing pairs of nonnegative integers,
 // A[i] and B[i]. You also have a global parameter T, corresponding to the
 // "temperature" of the data structure. Your goal is to support the following
@@ -17,24 +10,6 @@
 //   - query(s, e): return min{s <= i <= e} A[i] * T + B[i]
 //   - heaten(new_temp): set T = new_temp
 //       [precondition: new_temp >= current value of T]
-//
-// (For simplicity, we set A[i] = 0 and B[i] = LLONG_MAX for uninitialized
-// entries, which should not change the query results.)
-//
-// This allows you to essentially do arbitrary lower convex hull queries on a
-// collection of lines, as well as any contiguous subcollection of those lines.
-// This is more powerful than standard convex hull tricks and related data
-// structures (Li-Chao Segment Tree) for three reasons:
-//
-//   - You can arbitrarily remove/edit lines, not just add them.
-//   - Dynamic access to any subinterval of lines, which lets you avoid costly
-//     merge small-to-large operations in some cases.
-//   - Easy to reason about and implement from scratch, unlike dynamic CHT.
-//
-// The tradeoff is that you can only query sequential values (temperature is
-// only allowed to increase) for amortization reasons, but this happens to be
-// a fairly common case in many problems.
-//
 // Time complexity:
 //
 //   - query: O(log n)
