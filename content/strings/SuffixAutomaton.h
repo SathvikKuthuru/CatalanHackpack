@@ -1,6 +1,13 @@
-// len is the longest-length substring ending here
-// pos is the first index in the string matching here
-// term is whether this node is a terminal (aka a suffix)
+/**
+ * Author: Jacob Steinebronn
+ * Date: 2024-02-16
+ * License: Unknown
+ * Source: Suffix Automaton - a powerful tool for dealing with strings
+ * Description: Builds suffix automaton for a string.
+ * Time: O(n)
+ * Status: not stress-tested
+ */
+
 struct st { int len, pos, term; st *link; map<char, st*> next; };
 st *suffixAutomaton(string &str) {
     st *last = new st(), *root = last;
