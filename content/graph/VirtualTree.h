@@ -9,20 +9,16 @@ bool cmp(int u, int v) { return st[u] < st[v]; }
 
 int virtual_tree(vi vert) {
     sort(all(vert), cmp);
-
     int k = sz(vert);
     for(int i = 0; i < k - 1; i++) {
         int new_vertex = lca(vert[i], vert[i + 1]);
         vert.pb(new_vertex);
     }
-
     sort(all(vert), cmp);
     vert.erase(unique(all(vert)), vert.end());
-
     for(int v : vert) {
         adj_vt[v].clear();
     }
-
     vi stk;
     stk.pb(vert[0]);
     for(int i = 1; i < sz(vert); i++) {
@@ -31,10 +27,8 @@ int virtual_tree(vi vert) {
             adj_vt[stk[sz(stk) - 2]].pb(stk.back());
             stk.pop_back();
         }
-
         stk.pb(u);
     }
-
     while(sz(stk) >= 2) {
         adj_vt[stk[sz(stk) - 2]].pb(stk.back());
         stk.pop_back();
