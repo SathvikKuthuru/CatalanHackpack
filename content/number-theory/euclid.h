@@ -12,3 +12,18 @@ ll euclid(ll a, ll b, ll &x, ll &y) {
 	ll d = euclid(b, a % b, y, x);
 	return y -= a / b * x, d;
 }
+
+// a and m are coprime
+ll mod_inverse(ll a, ll m) {
+    ll x, y;
+    ll g = euclid(a, m, x, y);
+    
+    // No solution
+    if (g != 1) {
+        return -1;
+    }
+    else {
+        x = (x % m + m) % m;
+        return x;
+    }
+}
