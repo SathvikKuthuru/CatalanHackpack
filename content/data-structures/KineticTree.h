@@ -1,3 +1,10 @@
+/**
+ * Author: Eric K. Zhang
+ * Date: 2020-08-29
+ * Description: Query A[i] * T + B on a range, with updates
+ * Status: stress-tested
+ */
+
 // kinetic_tournament.cpp
 // Eric K. Zhang; Aug. 29, 2020
 //
