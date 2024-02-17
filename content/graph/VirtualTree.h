@@ -21,7 +21,6 @@ int virtual_tree(vi vert) {
 
     for(int v : vert) {
         adj_vt[v].clear();
-        dp[v] = -1;
     }
 
     vi stk;
