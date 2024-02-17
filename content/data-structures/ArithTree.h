@@ -1,6 +1,9 @@
-// Arithmetic Progression Range Add and Range Sum Query
-// Can be modified to Range Max Query
-
+/**
+ * Author: Sathvik Kuthuru
+ * Description: Add arithmetic progression to a range: b, b + d, b + 2d... and query sum
+ * Time: O(\log N) query and update
+ * Status: stress-tested
+ */
 struct ArithTree {
     ll base = 0, diff = 0, val = 0;
     ArithTree *l = nullptr;
