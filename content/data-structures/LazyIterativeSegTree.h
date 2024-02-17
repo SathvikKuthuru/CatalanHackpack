@@ -1,3 +1,8 @@
+/**
+ * Source: UCF Juicer
+ * Description: Lazy Iterative Segment Tree
+ */
+
 template<class T, T (*e)(), T (*op)(T, T), class F, F (*id)(),
 	T (*onto)(F, T), F (*comp)(F, F)>
 struct lazy_segtree {
