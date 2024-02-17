@@ -1,3 +1,9 @@
+/**
+ * Source: cp-algo
+ * Description: Faster Shortest Path Algorithm
+ * Detects negative cycles as well
+ */
+
 const int INF = 1000000000;
 vector<vector<pair<int, int>>> adj;
 
