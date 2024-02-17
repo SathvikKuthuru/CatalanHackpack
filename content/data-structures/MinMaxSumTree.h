@@ -1,3 +1,9 @@
+/**
+ * Author: Sathvik Kuthuru
+ * Description: Segment Tree Beats: Range min with, max with, add, and sum query
+ * Status: stress-tested
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
