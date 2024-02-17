@@ -1,4 +1,9 @@
-#define all(x) begin(x), end(x)
+/**
+ * Author: Sathvik Kuthuru
+ * Description: Offline Dynamic Connectivity
+ *  We essentially do an inorder traversal on time on a segment tree
+ */
+
 struct dsu_save {
     int u, v, subU, subV;
     dsu_save() {}
